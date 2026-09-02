@@ -1,0 +1,16 @@
+// Task 11: Async/Await with Try/Catch
+
+const fs = require("fs").promises;
+
+async function readTaskFile() {
+    try {
+        const data = await fs.readFile("tasklog.txt", "utf8");
+
+        console.log("Task file contents:");
+        console.log(data);
+    } catch (error) {
+        console.error("Error reading task file:", error.message);
+    }
+}
+
+readTaskFile();
