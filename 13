@@ -1,0 +1,14 @@
+// Task 13: Event Loop Execution Order
+
+
+console.log("1. Task Logger Started");
+
+setTimeout(() => {
+    console.log("4. Timer executed");
+}, 0);
+
+Promise.resolve().then(() => {
+    console.log("3. Promise executed");
+});
+
+console.log("2. Synchronous code executed");
