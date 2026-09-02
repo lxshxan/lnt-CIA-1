@@ -1,1 +1,8 @@
-# lnt-CIA-1
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}
