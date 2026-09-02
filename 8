@@ -1,0 +1,15 @@
+// Task 8: Appending a Task Using Callback
+
+
+const fs = require("fs");
+
+const task = "Complete Node.js practical assignment.\n";
+
+fs.appendFile("tasklog.txt", task, (err) => {
+    if (err) {
+        console.error("Error writing to file:", err);
+        return;
+    }
+
+    console.log("Task appended successfully.");
+});
