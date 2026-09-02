@@ -1,0 +1,13 @@
+// Task 14: EventEmitter
+
+const EventEmitter = require("events");
+
+const taskEmitter = new EventEmitter();
+
+// Create an event listener
+taskEmitter.on("taskCompleted", (taskName) => {
+    console.log(`Task completed: ${taskName}`);
+});
+
+// Emit the custom event
+taskEmitter.emit("taskCompleted", "Complete Node.js practical");
